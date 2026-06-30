@@ -190,3 +190,26 @@ print(classification_report(y_true, y_pred_corrected, target_names=['Healthy (0)
 
 # Keep plots open at the end of the script execution
 plt.show()
+
+import os
+import subprocess
+
+print("\n--- Starting Automatic GitHub Push ---")
+
+try:
+    # 1. Configure your identity details
+    subprocess.run(["git", "config", "--global", "user.name", "jasw591"], check=True)
+    subprocess.run(["git", "config", "--global", "user.email", "isatiyaj591@gmail.com"], check=True)
+
+    # 2. Stage your files, visuals, and metrics
+    subprocess.run(["git", "add", "."], check=True)
+
+    # 3. Create the commit message
+    subprocess.run(["git", "commit", "-m", "Automated pipeline update with metrics and visuals"], check=True)
+
+    # 4. Push directly up to main branch
+    subprocess.run(["git", "push", "origin", "main", "--force"], check=True)
+    print("🚀 Success! All files and generated visuals are now live on GitHub.")
+
+except subprocess.CalledProcessError as e:
+    print(f"Git push paused or failed. If a browser window opened, complete the login there. Error details: {e}")
