@@ -19,15 +19,14 @@ The script automatically generates and saves the following performance analytics
 
 # 1. Optimal Cluster Evaluation (Elbow Method)
 Used to find the optimal inflection point for patient clustering based on Within-Cluster Sum of Squares (Inertia).
-![Elbow Method Curve](elbow_method_curve.png)
-
+![Elbow Method Curve](Elbow%20Method%20Curve.png)
 # 2. Silhouette Score Optimization
 Measures how cohesive and well-separated the patient profile clusters are across different $K$ values.
-![Silhouette Scores Plot](silhouette_scores_plot.png)
+![Silhouette Scores Plot](Silhouette%20Scores%20Plot.png)
 
 # 3. Machine Groupings vs. Ground-Truth Realities
 A side-by-side comparative analysis validating unsupervised cluster distribution against real clinical medical outcomes.
-![Model vs Reality Comparison](model_vs_reality_comparison.png)
+![Model vs Reality Comparison](Model%20vs%20Reality%20Comparison.png)
 
 ---
 
